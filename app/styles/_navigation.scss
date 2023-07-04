@@ -1,0 +1,52 @@
+#navigation {
+  position: fixed;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 9999;
+  height: 50%;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  a {
+    display: block;
+    width: 120px;
+    height: 183px;
+    background: url(../../images/can-lime.png) no-repeat center center;
+    background-size: cover;
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(35px);
+
+    &:nth-child(3) {
+      background: url(../../images/can-strawberry.png) no-repeat center center;
+      background-size: cover;
+    }
+
+    &:nth-child(4) {
+      background: url(../../images/can-blueberry.png) no-repeat center center;
+      background-size: cover;
+    }
+
+    &:hover,
+    &:active {
+      transform: translateY(35px) scale(1.3);
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+}
+
+@media only screen and (min-width: 768px) {
+  #navigation {
+    bottom: -120px;
+
+    a {
+      width: 203px;
+      height: 309px;
+    }
+  }
+}

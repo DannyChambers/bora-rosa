@@ -1,0 +1,170 @@
+#title {
+  display: block;
+  font-family: "Ailerons", sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  line-height: 100vh;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+  z-index: 999;
+
+  .title-inner {
+    &:before,
+    &:after {
+      content: url(../../images/leaf.png);
+      display: block;
+      position: fixed;
+      bottom: -50px;
+      left: -100px;
+      width: auto;
+      height: auto;
+      line-height: normal;
+      transform: scale(1) rotate(55deg);
+      transition: transform 1s ease-in-out;
+    }
+
+    &:after {
+      bottom: 150px;
+      left: 0;
+      transform: scale(0.6) rotate(15deg);
+      filter: blur(5px);
+    }
+
+    .title-inner-inner {
+      &:before,
+      &:after {
+        content: url(../../images/leaf.png);
+        display: block;
+        position: fixed;
+        top: -150px;
+        right: -100px;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        transform: scale(0.8) rotate(-190deg);
+        transition: transform 1s ease-in-out;
+      }
+
+      &:after {
+        top: 100px;
+        right: 100px;
+        transform: scale(0.6) rotate(-100deg);
+        filter: blur(5px);
+      }
+    }
+  }
+
+  span {
+    display: block;
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1 /1;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -15%);
+
+    svg {
+      border: 10px solid white;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      padding: 30px 0 0 30px;
+      transition: transform 0.8s ease-in-out;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  #title {
+    top: 65.7%;
+    letter-spacing: -48px;
+    word-spacing: 31vw;
+    font-size: 16vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #title {
+    top: 50%;
+  }
+}
+
+.section-lime:target ~ #title {
+  span {
+    svg {
+      transform: rotate(-120deg);
+    }
+  }
+}
+
+.section-strawberry:target ~ #title {
+  .title-inner {
+    &:before,
+    &:after {
+      transform: scale(0.9) rotate(55deg) translate(100px, -200px);
+    }
+
+    &:after {
+      transform: scale(0.5) rotate(15deg);
+    }
+
+    .title-inner-inner {
+      &:before,
+      &:after {
+        transform: scale(0.8) rotate(-230deg) translate(200px, 170px);
+      }
+
+      &:after {
+        transform: scale(0.6) rotate(-135deg) translate(-130px, -100px);
+        filter: blur(5px);
+      }
+    }
+  }
+
+  span {
+    svg {
+      transform: rotate(-240deg);
+    }
+  }
+}
+
+.section-blueberry:target ~ #title {
+  .title-inner {
+    &:before,
+    &:after {
+      transform: scale(1) rotate(55deg);
+    }
+
+    &:after {
+      transform: scale(0.6) rotate(15deg);
+    }
+
+    .title-inner-inner {
+      &:before,
+      &:after {
+        transform: scale(0.8) rotate(-190deg);
+      }
+
+      &:after {
+        transform: scale(0.6) rotate(-100deg);
+      }
+    }
+
+    span {
+      svg {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+}
