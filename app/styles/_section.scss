@@ -208,7 +208,7 @@
             rgba(73, 75, 78, 0.5) 100%
           ),
           url(../../images/wrapper-blueberry.png);
-        background-position: 0 -50px;
+        background-position: 0 -25px;
 
         .can-content {
           &:before {
@@ -260,7 +260,7 @@
                 rgba(171, 175, 179, 0.5) 100%
               ),
               url(../../images/wrapper-blueberry.png);
-            background-position: 0% -50px;
+            background-position: 0% -25px;
           }
 
           h2,
@@ -276,7 +276,7 @@
 
   .can {
     position: fixed;
-    top: 450px;
+    top: 400px;
     left: 50%;
     // box-shadow: 0 29px 210px #000;
     filter: drop-shadow(0px 100px 100px rgba(0, 0, 0, 0.6));
@@ -284,8 +284,8 @@
     transition: transform 2s cubic-bezier(0.36, 1, 0.39, 0.99);
 
     .can-inner {
-      width: 280px;
-      height: 570px;
+      width: 200px;
+      height: 410px;
       aspect-ratio: 9 / 16;
       background-image: linear-gradient(
           90deg,
@@ -332,7 +332,7 @@
         ),
         url(../../images/wrapper-lime.png);
       background-size: auto 100%;
-      background-position: 100% -50px;
+      background-position: 100% -25px;
       background-repeat: no-repeat;
       padding: 140px 50px 0 50px;
       transition: background-position 1.8s ease-in-out;
@@ -448,7 +448,7 @@
             ),
             url(../../images/wrapper-lime.png);
           background-size: 300%;
-          background-position: 100% -50px;
+          background-position: 100% -25px;
           transition: background-position 1.8s ease-in-out;
           background-blend-mode: multiply;
           -webkit-mask-image: url(../../images/can-top-mask.svg);
@@ -461,7 +461,7 @@
           content: " ";
           display: block;
           width: 100%;
-          height: 75px;
+          height: 55px;
           position: absolute;
           top: 0;
           left: 0;
@@ -523,40 +523,24 @@
     transform: translate(-50%, -50%) translateZ(0px);
 
     .can-inner {
-      background-position: 0 -50px;
+      background-position: 0 -25px;
 
       .can-content {
         &:before {
-          background-position: 0 -50px;
+          background-position: 0 -25px;
         }
       }
-
-      // &:hover {
-      //   transition: background-position 0.4s ease-in-out;
-      //   background-position: center -50px;
-
-      //   .can-content {
-      //     &:before {
-      //       background-position: center -50px;
-      //     }
-
-      //     > * {
-      //       transition: opacity 0.4s ease-in-out 0.6s;
-      //       opacity: 1;
-      //     }
-      //   }
-      // }
     }
   }
 }
 
 .section-blueberry:target {
   .can .can-inner {
-    background-position: 100% -50px;
+    background-position: 100% -25px;
 
     .can-content {
       &:before {
-        background-position: 100% -50px;
+        background-position: 100% -25px;
       }
     }
   }
@@ -564,11 +548,11 @@
 
 .section-strawberry:target {
   .can .can-inner {
-    background-position: 0 -50px;
+    background-position: 0 -25px;
 
     .can-content {
       &:before {
-        background-position: 0 -50px;
+        background-position: 0 -25px;
       }
     }
   }
@@ -580,7 +564,7 @@
     transform: translate(100vw, -50%) translateZ(0px);
 
     .can-inner {
-      background-position: 100% -50px;
+      background-position: 100% -25px;
     }
   }
 }
@@ -597,6 +581,37 @@
 }
 
 @media only screen and (min-width: 480px) {
+  .section {
+    .can {
+      top: 450px;
+
+      .can-inner {
+        width: 330px;
+        height: 688px;
+        padding: 160px 50px 0 50px;
+
+        .can-content {
+          &:before,
+          &:after {
+            height: 145px;
+          }
+
+          &:after {
+            height: 125px;
+          }
+
+          h2 {
+            font-size: 28px;
+            padding-bottom: 8px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -634,6 +649,128 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .section {
+    .can {
+      top: 45%;
+
+      .can-inner {
+        width: 400px;
+        height: 800px;
+        padding: 220px 80px 0 80px;
+
+        .can-content {
+          &:before,
+          &:after {
+            height: 200px;
+          }
+
+          &:after {
+            height: 125px;
+          }
+
+          h2 {
+            font-size: 34px;
+            padding-bottom: 8px;
+          }
+
+          h3 {
+            font-size: 18px;
+            padding-bottom: 16px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 1.3em;
+            padding-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  &.section-strawberry {
+    .can {
+      .can-inner {
+        background-position: 0 -50px;
+
+        .can-content {
+          &:before {
+            background-position: 0% -50px;
+          }
+        }
+      }
+    }
+  }
+
+  &.section-blueberry {
+    .can {
+      .can-inner {
+        background-position: 0 -50px;
+
+        .can-content {
+          &:before {
+            background-position: 0% -50px;
+          }
+        }
+      }
+    }
+  }
+
+  .can {
+    .can-inner {
+      background-position: 100% -50px;
+
+      .can-content {
+        &:before {
+          background-position: 100% -50px;
+        }
+      }
+    }
+  }
+
+  .section:target {
+    &:before {
+      opacity: 1;
+    }
+    .can {
+      .can-inner {
+        background-position: 0 -50px;
+
+        .can-content {
+          &:before {
+            background-position: 0 -50px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-blueberry:target {
+    .can .can-inner {
+      background-position: 100% -50px;
+
+      .can-content {
+        &:before {
+          background-position: 100% -50px;
+        }
+      }
+    }
+  }
+
+  .section-strawberry:target {
+    .can .can-inner {
+      background-position: 0 -50px;
+
+      .can-content {
+        &:before {
+          background-position: 0 -50px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
   .section {
     .can {
       top: 45%;
